@@ -15,6 +15,13 @@ public class UrlCheckController {
 	private final String SITE_IS_UP = "Site is Up !!";
 	private final String SITE_IS_DOWN = "Site is Down !!";
 	private final String INCORRECT_URL = "URL is incorrect -!";
+	
+	
+	@GetMapping("/")
+	public String homee()
+	{
+		return "URL status checker";
+	}
 
 	@GetMapping("/check")
 	public String getUrlStatusMessage(@RequestParam String url) {
